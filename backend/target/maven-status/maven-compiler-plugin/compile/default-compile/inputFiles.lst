@@ -1,4 +1,5 @@
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/service/CourseService.java
+/home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/service/GradeService.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/service/EnrollmentService.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/repository/CourseRepository.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/model/EnrollmentStatus.java
@@ -8,6 +9,8 @@
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/VericredCampusApplication.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/controller/ProgramController.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/config/DatabaseSeeder.java
+/home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/model/Grade.java
+/home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/controller/GradeController.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/model/Course.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/model/Student.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/service/ProgramService.java
@@ -15,5 +18,6 @@
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/controller/EnrollmentController.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/repository/EnrollmentRepository.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/model/Program.java
+/home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/repository/GradeRepository.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/controller/StudentController.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/repository/ProgramRepository.java

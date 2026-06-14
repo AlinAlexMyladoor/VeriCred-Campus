@@ -15,7 +15,8 @@ import com.vericred.university.repository.CourseRepository;
 import com.vericred.university.repository.EnrollmentRepository;
 import com.vericred.university.repository.ProgramRepository;
 import com.vericred.university.repository.StudentRepository;
-
+import com.vericred.university.model.Grade;
+import com.vericred.university.repository.GradeRepository;
 @Configuration
 public class DatabaseSeeder {
 
@@ -24,7 +25,8 @@ public class DatabaseSeeder {
         StudentRepository studentRepository,
         ProgramRepository programRepository,
         CourseRepository courseRepository,
-        EnrollmentRepository enrollmentRepository) {
+        EnrollmentRepository enrollmentRepository,
+        GradeRepository gradeRepository){
 
         return args -> {
 
@@ -200,6 +202,50 @@ if (enrollmentRepository.count() == 0) {
     ));
 
     System.out.println("Enrollment Database Initialized.");
+
+}
+if (gradeRepository.count() == 0) {
+
+    gradeRepository.saveAll(List.of(
+
+            new Grade(
+                    "GRD-001",
+                    "ENR-001",
+                    "A",
+                    95.0
+            ),
+
+            new Grade(
+                    "GRD-002",
+                    "ENR-002",
+                    "A-",
+                    90.5
+            ),
+
+            new Grade(
+                    "GRD-003",
+                    "ENR-003",
+                    "B+",
+                    84.0
+            ),
+
+            new Grade(
+                    "GRD-004",
+                    "ENR-004",
+                    "A",
+                    93.0
+            ),
+
+            new Grade(
+                    "GRD-005",
+                    "ENR-005",
+                    "A+",
+                    98.0
+            )
+
+    ));
+
+    System.out.println("Grade Database Initialized.");
 
 }
 
