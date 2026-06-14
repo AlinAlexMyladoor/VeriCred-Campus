@@ -1,0 +1,11 @@
+com/vericred/university/model/EnrollmentStatus.class
+com/vericred/university/model/Program.class
+com/vericred/university/config/DatabaseSeeder.class
+com/vericred/university/repository/ProgramRepository.class
+com/vericred/university/service/StudentService.class
+com/vericred/university/repository/StudentRepository.class
+com/vericred/university/controller/ProgramController.class
+com/vericred/university/controller/StudentController.class
+com/vericred/university/VericredCampusApplication.class
+com/vericred/university/service/ProgramService.class
+com/vericred/university/model/Student.class

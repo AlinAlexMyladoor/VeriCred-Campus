@@ -6,6 +6,8 @@ import com.vericred.university.repository.StudentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import com.vericred.university.model.Program;
+import com.vericred.university.repository.ProgramRepository;
 
 import java.util.List;
 
@@ -13,13 +15,14 @@ import java.util.List;
 public class DatabaseSeeder {
 
     @Bean
-    CommandLineRunner initDatabase(StudentRepository repository) {
+    CommandLineRunner initDatabase(
+        StudentRepository studentRepository,
+        ProgramRepository programRepository) {
 
         return args -> {
 
-            if(repository.count()==0){
-
-                repository.saveAll(List.of(
+            if(studentRepository.count()==0){
+                studentRepository.saveAll(List.of(
 
                         new Student(
                                 "STU-1001",
@@ -56,6 +59,36 @@ public class DatabaseSeeder {
                 System.out.println("Mock Student Database Initialized.");
 
             }
+            if (programRepository.count() == 0) {
+
+    programRepository.saveAll(List.of(
+
+            new Program(
+                    "PRG-001",
+                    "B.Tech Computer Science",
+                    "Computer Science",
+                    4
+            ),
+
+            new Program(
+                    "PRG-002",
+                    "B.Tech Mechanical Engineering",
+                    "Mechanical Engineering",
+                    4
+            ),
+
+            new Program(
+                    "PRG-003",
+                    "Bachelor of Business Administration",
+                    "Business Administration",
+                    3
+            )
+
+    ));
+
+    System.out.println("Program Database Initialized.");
+
+}
 
         };
 
