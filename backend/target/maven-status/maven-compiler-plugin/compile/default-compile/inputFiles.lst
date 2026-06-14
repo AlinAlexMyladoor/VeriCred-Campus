@@ -1,5 +1,6 @@
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/model/EnrollmentStatus.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/repository/StudentRepository.java
+/home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/service/StudentService.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/VericredCampusApplication.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/config/DatabaseSeeder.java
 /home/alin/Desktop/VeriCred Campus/vericred-campus/backend/src/main/java/com/vericred/university/controller/StudentController.java
