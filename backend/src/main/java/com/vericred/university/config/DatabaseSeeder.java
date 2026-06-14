@@ -1,17 +1,20 @@
 package com.vericred.university.config;
 
-import com.vericred.university.model.EnrollmentStatus;
-import com.vericred.university.model.Student;
-import com.vericred.university.repository.StudentRepository;
+import java.util.List;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.vericred.university.model.Program;
-import com.vericred.university.repository.ProgramRepository;
-import com.vericred.university.model.Course;
-import com.vericred.university.repository.CourseRepository;
 
-import java.util.List;
+import com.vericred.university.model.Course;
+import com.vericred.university.model.Enrollment;
+import com.vericred.university.model.EnrollmentStatus;
+import com.vericred.university.model.Program;
+import com.vericred.university.model.Student;
+import com.vericred.university.repository.CourseRepository;
+import com.vericred.university.repository.EnrollmentRepository;
+import com.vericred.university.repository.ProgramRepository;
+import com.vericred.university.repository.StudentRepository;
 
 @Configuration
 public class DatabaseSeeder {
@@ -20,7 +23,8 @@ public class DatabaseSeeder {
    CommandLineRunner initDatabase(
         StudentRepository studentRepository,
         ProgramRepository programRepository,
-        CourseRepository courseRepository) {
+        CourseRepository courseRepository,
+        EnrollmentRepository enrollmentRepository) {
 
         return args -> {
 
@@ -147,6 +151,55 @@ if (courseRepository.count() == 0) {
     ));
 
     System.out.println("Course Database Initialized.");
+
+}
+if (enrollmentRepository.count() == 0) {
+
+    enrollmentRepository.saveAll(List.of(
+
+            new Enrollment(
+                    "ENR-001",
+                    "STU-1001",
+                    "CSE101",
+                    "2025-2026",
+                    1
+            ),
+
+            new Enrollment(
+                    "ENR-002",
+                    "STU-1001",
+                    "CSE201",
+                    "2025-2026",
+                    2
+            ),
+
+            new Enrollment(
+                    "ENR-003",
+                    "STU-1002",
+                    "MEC101",
+                    "2025-2026",
+                    1
+            ),
+
+            new Enrollment(
+                    "ENR-004",
+                    "STU-1002",
+                    "MEC201",
+                    "2025-2026",
+                    2
+            ),
+
+            new Enrollment(
+                    "ENR-005",
+                    "STU-1003",
+                    "BBA101",
+                    "2025-2026",
+                    1
+            )
+
+    ));
+
+    System.out.println("Enrollment Database Initialized.");
 
 }
 
