@@ -4,6 +4,7 @@ import com.vericred.university.model.Student;
 import com.vericred.university.service.StudentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.vericred.university.dto.StudentDTO;
 
 import java.util.List;
 
@@ -28,13 +29,11 @@ public class StudentController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Student> getStudent(@PathVariable String id) {
+public ResponseEntity<StudentDTO> getStudent(@PathVariable String id) {
 
-        return service.getStudentById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    return ResponseEntity.ok(service.getStudentDTOById(id));
 
-    }
+}
 
     @PostMapping
     public Student addStudent(@RequestBody Student student) {
