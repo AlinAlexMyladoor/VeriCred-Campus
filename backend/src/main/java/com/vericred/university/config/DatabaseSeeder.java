@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.vericred.university.model.Program;
 import com.vericred.university.repository.ProgramRepository;
+import com.vericred.university.model.Course;
+import com.vericred.university.repository.CourseRepository;
 
 import java.util.List;
 
@@ -15,9 +17,10 @@ import java.util.List;
 public class DatabaseSeeder {
 
     @Bean
-    CommandLineRunner initDatabase(
+   CommandLineRunner initDatabase(
         StudentRepository studentRepository,
-        ProgramRepository programRepository) {
+        ProgramRepository programRepository,
+        CourseRepository courseRepository) {
 
         return args -> {
 
@@ -87,6 +90,63 @@ public class DatabaseSeeder {
     ));
 
     System.out.println("Program Database Initialized.");
+
+}
+if (courseRepository.count() == 0) {
+
+    courseRepository.saveAll(List.of(
+
+            new Course(
+                    "CSE101",
+                    "Programming Fundamentals",
+                    "PRG-001",
+                    1,
+                    4
+            ),
+
+            new Course(
+                    "CSE201",
+                    "Data Structures",
+                    "PRG-001",
+                    2,
+                    4
+            ),
+
+            new Course(
+                    "CSE301",
+                    "Database Systems",
+                    "PRG-001",
+                    3,
+                    4
+            ),
+
+            new Course(
+                    "MEC101",
+                    "Engineering Mechanics",
+                    "PRG-002",
+                    1,
+                    4
+            ),
+
+            new Course(
+                    "MEC201",
+                    "Thermodynamics",
+                    "PRG-002",
+                    2,
+                    4
+            ),
+
+            new Course(
+                    "BBA101",
+                    "Business Management",
+                    "PRG-003",
+                    1,
+                    3
+            )
+
+    ));
+
+    System.out.println("Course Database Initialized.");
 
 }
 
