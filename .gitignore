@@ -1,0 +1,16 @@
+# MOSIP repositories
+inji-certify/
+inji-verify/
+
+# Backend build
+backend/target/
+
+# Node
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
